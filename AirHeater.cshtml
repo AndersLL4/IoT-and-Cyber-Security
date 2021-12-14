@@ -1,0 +1,30 @@
+﻿@page
+@model Lab3_retrive_sql_data.Pages.Shared.AirHeaterModel
+@{
+
+    ViewData["Title"] = "Temperature data from Air Heater";
+}
+<div>
+    <h1>Air Heater Model</h1>
+    In the table below you can see the measured temperature data from the air heater model:
+    <table class="table">
+        <thead>
+            <tr>
+                <th>TemperatureId</th>
+                <th>Temperature</th>
+                <th>timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var temperature in Model.TempDataList)
+            {
+                <tr>
+                    <td> @temperature.TemperatureId</td>
+                    <td> @temperature.Temperature</td>
+                    <td> @temperature.timestamp</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}

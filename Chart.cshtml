@@ -1,0 +1,46 @@
+﻿@page
+@model Air_Heater_Temperature_data.Pages.Shared.ChartModel
+@{
+    ViewData["Title"] = "Line Chart";
+    string chartTitle = "Temperature Data";
+    string chartUnit = "Celsius";
+    string xaxis = "Time";
+}
+
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+/**/
+                function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Time', 'Temperature'],
+                    @foreach (var chartData1 in Model.chartDataList) {
+                    <text>['@chartData1.timestamp', @chartData1.Temperature],</text>}
+                        ]);
+            var options = {
+            title: '@chartTitle',
+            curveType: 'function',
+            pointsVisible: true,
+            lineWidth: 3,
+            legend: 'none',
+            hAxis: {title: '@xaxis'},
+            vAxis: {title: '@chartUnit'},
+            width: '100%',
+            height: '100%',
+            chartArea: {width: '85%', height: '75%'}
+            };
+            var chart = new google.visualization.LineChart(document.getElementById('line_chart'));
+            chart.draw(data, options);
+                }
+    </script>
+</head>
+<body>
+<div class="container-fluid lead">
+    <div id="line_chart" style="width: 800px; height: 600px"></div>
+</div>
+</body>
+</html>
+
