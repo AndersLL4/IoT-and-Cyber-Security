@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Air Heater Temperature data", "Lab3_retrive_sql_data\Air Heater Temperature data.csproj", "{18CE91FC-E81E-4696-A127-64854AA7E44B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18CE91FC-E81E-4696-A127-64854AA7E44B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18CE91FC-E81E-4696-A127-64854AA7E44B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18CE91FC-E81E-4696-A127-64854AA7E44B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18CE91FC-E81E-4696-A127-64854AA7E44B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F98FA410-7887-40E9-BAAD-933F6059C27C}
+	EndGlobalSection
+EndGlobal
